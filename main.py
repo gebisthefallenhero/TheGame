@@ -1,7 +1,10 @@
 import Deck
+import Player
 
 if __name__ == '__main__':
-    testing = Deck.Deck()
-    for i in range(98):
-        testing.draw([])
-    print(testing.draw([]))
+    testDeck = Deck.Deck()
+    testPlayer = Player.Player()
+    testDeck.dealHands([testPlayer])
+    print(testPlayer.hand)
+    testPlayer.firstBid()
+    print(testPlayer.startBid)

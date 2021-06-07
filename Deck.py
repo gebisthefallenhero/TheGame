@@ -2,6 +2,7 @@ from random import shuffle
 class Deck:
     __DECK_LENGTH  = 98
     __HAND_SIZE = [8,7,6]
+    isEmpty = False
 
     def __init__(self):
         '''
@@ -44,6 +45,8 @@ class Deck:
         if self.index < self.__DECK_LENGTH:
             hand.append(self.deck[self.index])
             self.index += 1
+            if self.index >= self.__DECK_LENGTH:
+                self.isEmpty = True
             return hand
         else:
             return hand
