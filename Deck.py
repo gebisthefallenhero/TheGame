@@ -12,6 +12,9 @@ class Deck:
         shuffle(self.deck)
         self.index = 0
 
+    def getHandSize(self):
+        return self.__HAND_SIZE
+
     def dealHands(self,playerList):
         '''
         Deals hands to each player.
@@ -33,6 +36,7 @@ class Deck:
         :return: None
         '''
         for player in playerList:
+            player.handSize = cardAmount
             for i in range(cardAmount):
                 self.draw(player.hand)
 

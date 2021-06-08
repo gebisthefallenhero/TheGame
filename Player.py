@@ -1,5 +1,6 @@
 from math import floor
 class Player:
+    handSize = 0
 
     def __init__(self):
         self.hand = []
@@ -7,6 +8,9 @@ class Player:
         self.startBid = 0
         self.otherBid = 0
         self.isHandEmpty = False
+
+    def __str__(self):
+        return self.hand
 
     def firstBid(self,index=0):
         '''
